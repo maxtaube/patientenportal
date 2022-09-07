@@ -27,6 +27,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Dokumente',
         link: '/pages/patientenportal/dokumente'        
+      },
+      {
+        title: 'Medikationsplan',
+        link: '/pages/patientenportal/medikationsplan'        
       }
     ]
   },
