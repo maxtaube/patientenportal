@@ -9,14 +9,38 @@
 </div>
 
 <div class="row">
-  <nb-card>
-    <nb-card-header>
-      Medikamente
-    </nb-card-header>
-  
-    <nb-card-body>
-      <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
-      </ng2-smart-table>
-    </nb-card-body>
-  </nb-card>
+  <div class="col-md-12 col-lg-6">
+    <nb-card>
+      <nb-card-header>
+        Medikamente
+      </nb-card-header>
+
+      <nb-card-body>
+        <ng2-smart-table [settings]="settings" [source]="data" (rowSelect)="showMyContainer=!showMyContainer" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+
+  <div *ngIf="showMyContainer" class="col-md-12 col-lg-6">
+    <nb-card>
+      <nb-card-header>
+        Medikamente
+      </nb-card-header>
+
+      <nb-card-body>
+        <p><strong>Hersteller</strong> 
+          asdsd</p>
+        <p><strong>Form</strong> 
+          sdfsdfsdf</p>
+      </nb-card-body>
+    </nb-card>
+  </div>
 </div>
+
+<div class="row">
+  <div class="col-md-12 col-lg-6">
+    <button class="float-lg-right" nbButton status="primary" (click)="open()">Medikament hinzufügen</button>
+  </div>
+</div>
+<!-- <button nbButton status="primary" (click)="testFunction($event)">Primary</button> -->

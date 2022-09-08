@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NbDialogService } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
 import { SmartTableData } from '../../../@core/data/smart-table';
+import { StepperComponent } from './stepper/stepper.component';
 
 @Component({
   selector: 'ngx-medikationsplan',
@@ -8,18 +10,40 @@ import { SmartTableData } from '../../../@core/data/smart-table';
   styleUrls: ['./medikationsplan.component.scss']
 })
 export class MedikationsplanComponent implements OnInit {
+  showMyContainer: boolean = false;
 
-  
+  data = [{
+    id: 1,
+    firstName: 'Mark',
+    lastName: 'Otto',
+    username: '@mdo',
+    email: 'mdo@gmail.com',
+    age: '28',
+  }, {
+    id: 2,
+    firstName: 'Jacob',
+    lastName: 'Thornton',
+    username: '@fat',
+    email: 'fat@yandex.ru',
+    age: '45',
+  }]
 
-  constructor(private service: SmartTableData) {
-    const data = this.service.getData();
-    this.source.load(data);
+  constructor(private dialogService: NbDialogService) {}
+
+  open() {
+    this.dialogService.open(StepperComponent, {
+      context: {
+        title: 'This is a title passed to the dialog component',
+      },
+    });
   }
 
   ngOnInit(): void {
   }
 
   settings = {
+    mode: 'internal',
+    hideSubHeader: true,
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -38,6 +62,7 @@ export class MedikationsplanComponent implements OnInit {
       id: {
         title: 'ID',
         type: 'number',
+        editable: false,
       },
       firstName: {
         title: 'First Name',
@@ -60,10 +85,27 @@ export class MedikationsplanComponent implements OnInit {
         type: 'number',
       },
     },
+    actions: {
+      add: false,
+      edit: false,
+      delete: true,
+      position: 'right',
+    },
   };
+
   
-  source: LocalDataSource = new LocalDataSource();
   
+  /* source: LocalDataSource = new LocalDataSource(); */
+  
+  onSelectRow(event): void {
+    console.log('Row selected');
+    
+  }
+
+  testFunction(event): void {
+    console.log("test");
+  }
+
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();

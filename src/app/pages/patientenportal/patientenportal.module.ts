@@ -17,6 +17,7 @@ import { PatientenportalComponent } from './patientenportal.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { DokumenteComponent } from './dokumente/dokumente.component';
 import { MedikationsplanComponent } from './medikationsplan/medikationsplan.component';
+import { StepperComponent } from './medikationsplan/stepper/stepper.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { MedikationsplanComponent } from './medikationsplan/medikationsplan.comp
     LandingpageComponent,
     DokumenteComponent,
     MedikationsplanComponent,
+    StepperComponent,
   ]
 })
 export class PatientenportalModule { }
