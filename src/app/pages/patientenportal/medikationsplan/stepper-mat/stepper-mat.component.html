@@ -1,0 +1,69 @@
+<!-- <mat-dialog-content>
+  <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <ng-template matStepperIcon="edit">
+      <fa-icon [icon]="faPen"></fa-icon>
+    </ng-template>
+    <mat-step label="medication" [completed]="formService.isStepValid('medication')">
+      <ng-template matStepLabel>{{'medication.form.medication.header' | translate}}</ng-template>
+      <app-medication-name-form></app-medication-name-form>
+    </mat-step>
+    <mat-step label="dosage" [completed]="formService.isStepValid('dosage')">
+      <ng-template matStepLabel>{{'medication.form.dosage.header' | translate}}</ng-template>
+      <app-medication-dosage-form></app-medication-dosage-form>
+    </mat-step>
+    <mat-step label="instructions" [completed]="formService.isStepValid('instructions')">
+      <ng-template matStepLabel>{{'medication.form.instructions.header' | translate}}</ng-template>
+      <app-medication-instructions-form></app-medication-instructions-form>
+    </mat-step>
+    <mat-step label="summary">
+      <ng-template matStepLabel>{{'medication.form.summary.header' | translate}}</ng-template>
+      <app-medication-details
+        [medicationStatement]="this.formService.mainForm.valueChanges"></app-medication-details>
+    </mat-step>
+  </mat-vertical-stepper>
+
+</mat-dialog-content> -->
+
+
+<nb-card size="medium">
+  <nb-card-body>
+    <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+      {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+    </button>
+    <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out your name</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your address</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </nb-card-body>
+</nb-card>

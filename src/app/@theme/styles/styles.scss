@@ -2,6 +2,7 @@
 
 // themes - our custom or/and out of the box themes
 @import 'themes';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 // framework component themes (styles tied to theme variables)
 @import '~@nebular/theme/styles/globals';
@@ -31,3 +32,10 @@
 
   @include nb-overrides();
 };
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*:focus {
+  outline: none !important;
+  border: 0 !important;
+}

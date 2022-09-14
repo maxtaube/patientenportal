@@ -18,6 +18,14 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
 import { DokumenteComponent } from './dokumente/dokumente.component';
 import { MedikationsplanComponent } from './medikationsplan/medikationsplan.component';
 import { StepperComponent } from './medikationsplan/stepper/stepper.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
+import {MatStepperModule} from "@angular/material/stepper";
+import { StepperMatComponent } from './medikationsplan/stepper-mat/stepper-mat.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -35,6 +43,13 @@ import { StepperComponent } from './medikationsplan/stepper/stepper.component';
     PatientenportalRoutingModule,
     NbIconModule,
     Ng2SmartTableModule,
+    MatSliderModule,
+    MatCardModule,
+    MatStepperModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule
   ],
   declarations: [
     PatientenportalComponent,
@@ -42,6 +57,7 @@ import { StepperComponent } from './medikationsplan/stepper/stepper.component';
     DokumenteComponent,
     MedikationsplanComponent,
     StepperComponent,
+    StepperMatComponent,
   ]
 })
 export class PatientenportalModule { }

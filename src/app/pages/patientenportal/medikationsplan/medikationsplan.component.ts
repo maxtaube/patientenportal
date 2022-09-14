@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { NbDialogService } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
 import { SmartTableData } from '../../../@core/data/smart-table';
+import { StepperMatComponent } from './stepper-mat/stepper-mat.component';
+/* import { StepperMatComponent } from './stepper-mat/stepper-mat.component'; */
 import { StepperComponent } from './stepper/stepper.component';
 
 @Component({
@@ -28,15 +31,28 @@ export class MedikationsplanComponent implements OnInit {
     age: '45',
   }]
 
-  constructor(private dialogService: NbDialogService) {}
+  constructor(private dialogService: NbDialogService, private _formBuilder: FormBuilder) {}
 
-  open() {
+  openStepperNebular() {
     this.dialogService.open(StepperComponent, {
       context: {
         title: 'This is a title passed to the dialog component',
       },
     });
   }
+
+  openStepperMaterial() {
+    this.dialogService.open(StepperMatComponent);
+  }
+  
+  isLinear = true;
+
+  firstFormGroup = this._formBuilder.group({
+    firstCtrl: ['', Validators.required],
+  });
+  secondFormGroup = this._formBuilder.group({
+    secondCtrl: ['', Validators.required],
+  });
 
   ngOnInit(): void {
   }
