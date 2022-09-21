@@ -1,0 +1,88 @@
+<form [formGroup]="dosageForm">
+  <ng-template matStepLabel>
+    {{'medication.form.medication.header' | translate}}
+  </ng-template>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
+    <div>
+      <mat-button-toggle-group formControlName="type">
+        <mat-button-toggle value="text"><!-- {{'medication.form.dosage.text.label' | translate}} --> Blabla</mat-button-toggle>
+        <mat-button-toggle value="dosageScheme"><!-- {{'medication.form.dosage.dosageScheme.label' | translate}} --> Bla</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div fxFlex fxLayout="column" fxLayoutGap="10px">
+      <div *ngIf="dosageForm.controls.type.value == 'text'" fxFlex>
+        <mat-form-field class="text">
+          <input formControlName="text" matInput autofocus
+                 type="text"
+                 [placeholder]="'medication.form.dosage.text.label' | translate"
+          >
+          <mat-error *ngIf="dosageForm.controls.text.errors">
+            {{dosageForm.controls.text.errors | translateTopmostValidationError}}
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div *ngIf="dosageForm.controls.type.value == 'dosageScheme'" fxFlex fxLayout="column">
+        <div fxFlex>
+          <mat-form-field class="text">
+            <input formControlName="unit" matInput autofocus
+                   type="text"
+                   [placeholder]="'medication.form.dosage.unit.label' | translate"
+                   [matAutocomplete]="unitAutoComplete"
+            >
+            <mat-autocomplete #unitAutoComplete="matAutocomplete">
+              <mat-option *ngFor="let unit of availableDosageUnits"
+                          [value]="'medication.form.dosage.unit.list.' + unit | translate">
+                {{'medication.form.dosage.unit.list.' + unit | translate}}
+              </mat-option>
+            </mat-autocomplete>
+            <mat-error *ngIf="dosageForm.controls.unit.errors">
+              {{dosageForm.controls.unit.errors | translateTopmostValidationError}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div fxFlex fxLayout="row" fxLayoutGap="10px" formGroupName="dosageScheme">
+          <mat-form-field fxFlex="1 1 55px">
+            <input formControlName="W" matInput class="w3-input" type="number"
+                   [placeholder]="'medication.form.dosage.dosageScheme.W.label' | translate">
+            <span matPrefix>
+                <fa-icon></fa-icon>
+              </span>
+            <mat-error *ngIf="dosageSchemeForm.controls.W.errors">
+              {{dosageSchemeForm.controls.W.errors | translateTopmostValidationError}}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field fxFlex="1 1 55px">
+            <input formControlName="X" matInput class="w3-input" type="number"
+                   [placeholder]="'medication.form.dosage.dosageScheme.X.label' | translate">
+            <span matPrefix>
+                <fa-icon></fa-icon>
+              </span>
+            <mat-error *ngIf="dosageSchemeForm.controls.X.errors">
+              {{dosageSchemeForm.controls.X.errors | translateTopmostValidationError}}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field fxFlex="1 1 55px">
+            <input formControlName="Y" matInput class="w3-input" type="number"
+                   [placeholder]="'medication.form.dosage.dosageScheme.Y.label' | translate">
+            <span matPrefix>
+                <fa-icon></fa-icon>
+              </span>
+            <mat-error *ngIf="dosageSchemeForm.controls.Y.errors">
+              {{dosageSchemeForm.controls.Y.errors | translateTopmostValidationError}}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field fxFlex="1 1 55px">
+            <input formControlName="Z" matInput class="w3-input" type="number"
+                   [placeholder]="'medication.form.dosage.dosageScheme.Z.label' | translate">
+            <span matPrefix>
+                <fa-icon></fa-icon>
+              </span>
+            <mat-error *ngIf="dosageSchemeForm.controls.Z.errors">
+              {{dosageSchemeForm.controls.Z.errors | translateTopmostValidationError}}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

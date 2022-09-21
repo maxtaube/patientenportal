@@ -1,0 +1,50 @@
+<form [formGroup]="instructionsForm">
+  <ng-template matStepLabel>
+    {{'medication.form.instructions.header' | translate}}
+  </ng-template>
+  <div fxLayout="column" fxLayoutGap="10px">
+    <div fxFlex fxLayout="column" fxLayoutGap="10px">
+      <mat-form-field fxFlex>
+        <textarea formControlName="reasonToTake" matInput autofocus cdkTextareaAutosize
+                  class="w3-input"
+                  
+        ></textarea>
+        <mat-error *ngIf="instructionsForm.controls.reasonToTake.errors">
+          {{instructionsForm.controls.reasonToTake.errors | translateTopmostValidationError}}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field fxFlex>
+        <textarea formControlName="patientInstructions" matInput autofocus cdkTextareaAutosize
+                  class="w3-input"
+                  
+        ></textarea>
+        <mat-error *ngIf="instructionsForm.controls.patientInstructions.errors">
+          {{instructionsForm.controls.patientInstructions.errors | translateTopmostValidationError}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div fxFlex fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px" formGroupName="effectivePeriod">
+      <!-- Period - 2 date pickers for start and end -->
+      <mat-form-field>
+        <!-- <input matInput [matDatepicker]="startPicker"
+               formControlName="start"
+               >
+        <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+        <mat-datepicker #startPicker></mat-datepicker> -->
+        <mat-error *ngIf="periodForm.controls.start.errors">
+          {{periodForm.controls.start.errors | translateTopmostValidationError}}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <!-- <input matInput [matDatepicker]="endPicker"
+               formControlName="end"
+               >
+        <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+        <mat-datepicker #endPicker></mat-datepicker> -->
+        <mat-error *ngIf="periodForm.controls.end.errors">
+          {{periodForm.controls.end.errors | translateTopmostValidationError}}
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+</form>
