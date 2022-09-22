@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { NbDialogService } from '@nebular/theme';
+import { NbDialogService, NbIconLibraries } from '@nebular/theme';
 import { LocalDataSource } from 'ng2-smart-table';
 import { SmartTableData } from '../../../@core/data/smart-table';
 import { StepperMatComponent } from './stepper-mat/stepper-mat.component';
@@ -31,7 +31,11 @@ export class MedikationsplanComponent implements OnInit {
     age: '45',
   }]
 
-  constructor(private dialogService: NbDialogService, private _formBuilder: FormBuilder) {}
+  constructor(private dialogService: NbDialogService, private _formBuilder: FormBuilder, private iconLibraries: NbIconLibraries) {
+    this.iconLibraries.registerSvgPack('health', {
+      'medicines': '<img src="../../../../assets/icons/default/icon_medikamente.svg" width="25px">'
+    });
+  }
 
   openStepperNebular() {
     this.dialogService.open(StepperComponent, {
