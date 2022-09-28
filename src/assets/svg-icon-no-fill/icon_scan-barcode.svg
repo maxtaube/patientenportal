@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg id="icon-scan-barcode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs />
+  <path d="M46.56,28.27H.94a.5.5,0,0,1-.5-.5.5.5,0,0,1,.5-.5H46.56a.5.5,0,0,1,.5.5A.5.5,0,0,1,46.56,28.27Z" class="fill-color" />
+  <g class="stroke-color">
+    <rect x="4.16" y="28.8" width="2.15" height="9.55" />
+    <rect x="8.2" y="28.8" width="2.96" height="9.55" />
+    <rect x="12.23" y="28.8" width="1.08" height="9.55" />
+    <rect x="15.59" y="28.8" width="2.82" height="9.55" />
+    <rect x="19.22" y="28.8" width="2.15" height="9.55" />
+    <rect x="25.41" y="28.8" width="1.08" height="9.55" />
+    <rect x="27.83" y="28.8" width="1.08" height="9.55" />
+    <rect x="30.25" y="28.8" width="3.23" height="9.55" />
+    <rect x="37.51" y="28.8" width="1.08" height="9.55" />
+    <rect x="40.47" y="28.8" width="3.09" height="9.55" />
+    <rect x="4.16" y="8.94" width="2.15" height="17.78" />
+    <rect x="8.2" y="8.94" width="2.96" height="17.78" />
+    <rect x="12.23" y="8.94" width="1.08" height="17.78" />
+    <rect x="15.59" y="8.94" width="2.82" height="17.78" />
+    <rect x="19.22" y="8.94" width="2.15" height="17.78" />
+    <rect x="25.41" y="8.94" width="1.08" height="17.78" />
+    <rect x="27.83" y="8.94" width="1.08" height="17.78" />
+    <rect x="30.25" y="8.94" width="3.23" height="17.78" />
+    <rect x="37.51" y="8.94" width="1.08" height="17.78" />
+    <rect x="40.47" y="8.94" width="3.09" height="17.78" />
+  </g>
+</svg>

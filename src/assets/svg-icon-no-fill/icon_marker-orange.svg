@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg id="icon-marker-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs />
+  <circle class="fill-color" cx="24" cy="24" r="21.18" />
+  <path d="M24,45.93A21.93,21.93,0,1,1,45.93,24,22,22,0,0,1,24,45.93ZM24,3.57A20.43,20.43,0,1,0,44.43,24,20.46,20.46,0,0,0,24,3.57Z" class="stroke-color" />
+</svg>

@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <polygon class="fill-background-color stroke-color" points="40.4 43.53 7.6 43.53 7.6 11.24 14.01 4.47 40.4 4.47 40.4 43.53"/>
+  <circle class="fill-color stroke-color" cx="13.07" cy="14.71" r="1.44"/>
+  <circle class="fill-color stroke-color" cx="13.07" cy="20.52" r="1.44"/>
+  <circle class="fill-color stroke-color" cx="13.07" cy="26.32" r="1.44"/>
+  <circle class="fill-color stroke-color" cx="13.07" cy="32.13" r="1.44"/>
+  <circle class="fill-color stroke-color" cx="13.07" cy="37.93" r="1.44"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round;" x1="16.68" y1="14.37" x2="35.52" y2="14.37"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round;" x1="16.68" y1="20.08" x2="35.52" y2="20.08"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round;" x1="16.68" y1="25.79" x2="35.52" y2="25.79"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round;" x1="16.68" y1="31.5" x2="35.52" y2="31.5"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round;" x1="16.68" y1="37.21" x2="35.52" y2="37.21"/>
+  <polyline class="fill-none stroke-color" points="14.17 4.6 14.17 11.33 7.6 11.33"/>
+</svg>

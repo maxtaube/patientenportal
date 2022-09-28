@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <polygon class="fill-color stroke-color"  points="38.57 40.13 9.9 40.13 9.9 11.91 15.51 5.99 38.57 5.99 38.57 40.13"/>
+  <polygon class="fill-background-color stroke-color"  points="35.8 37.36 7.13 37.36 7.13 9.13 12.73 3.21 35.8 3.21 35.8 37.36"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round" x1="11.96" y1="11.86" x2="30.85" y2="11.86"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round" x1="11.96" y1="16.86" x2="30.85" y2="16.86"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round" x1="11.96" y1="21.85" x2="30.85" y2="21.85"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round" x1="11.96" y1="26.84" x2="30.85" y2="26.84"/>
+  <line class="fill-none stroke-color" style="stroke-linecap: round" x1="11.96" y1="31.84" x2="30.85" y2="31.84"/>
+  <polyline class="fill-none stroke-color"  points="12.87 3.33 12.87 9.21 7.13 9.21"/>
+  <circle class="fill-background-color stroke-color"  cx="26.24" cy="27.23" r="9.73"/>
+  <rect class="fill-background-color stroke-color"  x="35.61" y="34.42" width="5.46" height="11.73" rx="1.35"
+        transform="translate(-17.21 38.98) rotate(-45)"/>
+  <line class="fill-background-color stroke-color"  x1="32.62" y1="34.58" x2="34.23" y2="36.18"/>
+  <rect class="fill-color"  x="20.21" y="22.03" width="3.11" height="10.21" rx="0.88"/>
+  <rect class="fill-color"  x="24.75" y="24.27" width="3.11" height="7.96" rx="0.88"/>
+  <rect class="fill-color"  x="29.29" y="27.23" width="3.11" height="5.01" rx="0.88"/>
+</svg>
