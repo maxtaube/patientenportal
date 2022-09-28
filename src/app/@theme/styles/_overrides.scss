@@ -8,8 +8,64 @@
       right: 0.41rem !important;
     }
   }
-  nb-card-header {
+
+  /** Card */
+  /* nb-card-header {
     background: #633300;
     color:white;
+  } */
+
+  nb-card {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border:none;
+}
+
+  nb-card-header {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
+
+  nb-card-footer {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
+
+  ng2-smart-table {
+    thead tr.ng2-smart-titles {
+      background: #633300 !important;
+      border: 2px solid #633300 !important;
+    }
+    tr.ng2-smart-titles th {
+      color:white !important;
+      a 
+      {
+        color:white !important;
+      }
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #eaded6!important;
+    }
+    tbody tr:nth-child(even) {
+      background-color: white!important;
+    }
+    tr.selected {
+      border: 2px solid #633300;
+    }
+    tr td {
+      border-right:1px solid #b05a00 !important;
+    }
+    tr td:last-of-type {
+      border-right:none !important;
+    }
   }
 }

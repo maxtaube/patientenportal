@@ -17,18 +17,14 @@ export class MedikationsplanComponent implements OnInit {
 
   data = [{
     id: 1,
-    firstName: 'Mark',
-    lastName: 'Otto',
-    username: '@mdo',
-    email: 'mdo@gmail.com',
-    age: '28',
+    Handelsname: 'Clopidogrel STADA 75mg',
+    Form: 'Tabletten, Kapseln oder Pillen',
+    Grund: '',
   }, {
     id: 2,
-    firstName: 'Jacob',
-    lastName: 'Thornton',
-    username: '@fat',
-    email: 'fat@yandex.ru',
-    age: '45',
+    Handelsname: 'Clopidogrel STADA 75mg',
+    Form: 'Tabletten, Kapseln oder Pillen',
+    Grund: 'Blutverdünner',
   }]
 
   constructor(private dialogService: NbDialogService, private _formBuilder: FormBuilder) {
@@ -81,25 +77,17 @@ export class MedikationsplanComponent implements OnInit {
         type: 'number',
         editable: false,
       },
-      firstName: {
-        title: 'First Name',
+      Handelsname: {
+        title: 'Handelsname',
         type: 'string',
       },
-      lastName: {
-        title: 'Last Name',
+      Form: {
+        title: 'Form',
         type: 'string',
       },
-      username: {
-        title: 'Username',
+      Grund: {
+        title: 'Grund',
         type: 'string',
-      },
-      email: {
-        title: 'E-mail',
-        type: 'string',
-      },
-      age: {
-        title: 'Age',
-        type: 'number',
       },
     },
     actions: {
